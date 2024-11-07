@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết Sản phẩm A</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        .product-detail {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .product-detail img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .product-detail h3 {
+            margin-top: 10px;
+        }
+        .product-detail p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        .product-detail .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #f39c12;
+        }
+        .product-detail button {
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .product-detail button:hover {
+            background-color: #e67e22;
+        }
+        .product-detail .color-options {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .color-options div {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid #ccc;
+        }
+        .color-options .blue { background-color: blue; }
+        .color-options .yellow { background-color: yellow; }
+        .color-options .pink { background-color: pink; }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Chi tiết Sản phẩm A</h1>
+</header>
+
+<div class="product-detail">
+    <h3>Sản phẩm A</h3>
+    <p id="product-price" class="price">500.000 VNĐ</p>
+    <p>Sản phẩm dành cho trẻ em dưới 1 tuổi, an toàn và dễ sử dụng.</p>
+
+    <!-- Ảnh chính của sản phẩm -->
+    <img src="https://private-user-images.githubusercontent.com/187364151/383865428-9374ac1d-fa8d-431e-bf5b-92fa18949f4f.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzA5NjY2MjcsIm5iZiI6MTczMDk2NjMyNywicGF0aCI6Ii8xODczNjQxNTEvMzgzODY1NDI4LTkzNzRhYzFkLWZhOGQtNDMxZS1iZjViLTkyZmExODk0OWY0Zi5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMTA3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTEwN1QwNzU4NDdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT01YTI1ZjhmNzUyODdmMTQ2ZTNiZDRkNmVkOTk0MDk0MWM3MWJkZWZkNGMwNDFlNzVjY2VlNzEwMmYwMWU1YmY4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.xSmonydJsIQ2oGkMkvVJOE5pikH8sQ5KrHPZKz9xYqc" alt="Sản phẩm A - Màu xanh dương" id="main-image">
+
+    <!-- Các tùy chọn màu sắc -->
+    <div class="color-options">
+        <div class="blue" onclick="changeImage('blue')"></div>
+        <div class="yellow" onclick="changeImage('yellow')"></div>
+        <div class="pink" onclick="changeImage('pink')"></div>
+    </div>
+
+    <!-- Thêm vào giỏ hàng và mua ngay -->
+    <button>Thêm vào giỏ hàng</button>
+    <button>Mua ngay</button>
+</div>
+
+<footer>
+    <p>© 2024 Trang Bán Hàng của Tôi. Tất cả quyền được bảo vệ.</p>
+</footer>
+
+<script>
+    function changeImage(color) {
+        let imageSrc = '';
+        let priceText = '';
+
+        // Các đường dẫn ảnh thật cho sản phẩm theo từng màu sắc và giá
+        if (color === 'blue') {
+            imageSrc = 'https://private-user-images.githubusercontent.com/187364151/383865583-b6294edf-1500-4843-aaf9-bf16357c0b83.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzA5NjY2MjcsIm5iZiI6MTczMDk2NjMyNywicGF0aCI6Ii8xODczNjQxNTEvMzgzODY1NTgzLWI2Mjk0ZWRmLTE1MDAtNDg0My1hYWY5LWJmMTYzNTdjMGI4My5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMTA3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTEwN1QwNzU4NDdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hMzJkMDBmOWY3NDUyYjkyZDkxNjRhZjNmOTJlZTJjNTMxYzkwYWIzMTAxYTAzMmE2Y2Y4ZTUzNzRhMjNhMzdjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.8qZt_z0u-PjMWLkuwCqVE68WaZQVPZYXvBXtiFSFJsc'; // Ảnh màu xanh dương
+            priceText = '500.000 VNĐ'; // Giá cho màu xanh
+        } else if (color === 'yellow') {
+            imageSrc = 'https://private-user-images.githubusercontent.com/187364151/383865725-f388281d-4b94-48da-a4b8-5740336b691a.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzA5NjY2MjcsIm5iZiI6MTczMDk2NjMyNywicGF0aCI6Ii8xODczNjQxNTEvMzgzODY1NzI1LWYzODgyODFkLTRiOTQtNDhkYS1hNGI4LTU3NDAzMzZiNjkxYS5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMTA3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTEwN1QwNzU4NDdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iZmIyNjI2NzAwMTI3ZDM1MjdlODMxMzk4MTQ4NmRiMGNmZGU2YmIxYzk1YThkMTQ5ZGVlY2U4MmI5MmVjOTM2JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.zPBw_PcqSEzT8PjDygFaufMJPP6cpUXW_MoGCgg6cf4'; // Ảnh màu vàng
+            priceText = '500.000 VNĐ'; // Giá cho màu vàng
+        } else if (color === 'pink') {
+            imageSrc = 'https://private-user-images.githubusercontent.com/187364151/383865447-879749a6-eb94-4b30-83b4-cadbfea230e8.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzA5NjY2MjcsIm5iZiI6MTczMDk2NjMyNywicGF0aCI6Ii8xODczNjQxNTEvMzgzODY1NDQ3LTg3OTc0OWE2LWViOTQtNGIzMC04M2I0LWNhZGJmZWEyMzBlOC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMTA3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTEwN1QwNzU4NDdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yYWFjMmFhMGE0MjAxNTAyYTBjYjdmODFmNjZhNDgxOTk5MThlNDJhNjkxMmRhNzg5ZjdkZTE3ZmNhYWZkZjA4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.ARjxjADrGxCC7PXzaaC6d_zfz7iqSPrtKpGncYWjeOU'; // Ảnh màu hồng
+            priceText = '520.000 VNĐ'; // Giá cho màu hồng
+        }
+
+        document.getElementById('main-image').src = imageSrc;
+        document.getElementById('product-price').innerText = priceText;
+    }
+</script>
+
+</body>
+</html>
