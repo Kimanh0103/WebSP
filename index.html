@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Web Của Tôi</title>
-    <!-- Google tag (gtag.js) -->
+    <title>Trang Bán Hàng</title>
+     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-E1MB1N5ZMS"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -15,111 +15,151 @@
 </script>
     <style>
         body {
-            background-color: lightblue;
             font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
         }
-        h1 {
-            color: darkblue;
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .product {
+            background-color: white;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            box-sizing: border-box;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .product h3 {
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        .product .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #f39c12;
+        }
+        .product button {
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .product button:hover {
+            background-color: #e67e22;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
-    <h1>Chào mừng đến với trang web của tôi!</h1>
+
+<header>
+    <h1>Trang Bán Hàng</h1>
+    <p>Chào mừng bạn đến với cửa hàng của chúng tôi</p>
+</header>
+
+<div class="container">
+    <!-- Sản phẩm A -->
+    <div class="product">
+        <a href="productA.html">
+            <img src="https://via.placeholder.com/250" alt="Sản phẩm A">
+        </a>
+        <a href="productA.html">
+            <h3>Sản phẩm A</h3>
+        </a>
+        <p class="price">500.000 VNĐ</p>
+        <a href="productA.html">
+            <button>Thêm vào giỏ hàng</button>
+        </a>
+        <a href="productA.html">
+            <button>Mua ngay</button>
+        </a>
+    </div>
+
+    <!-- Sản phẩm B -->
+    <div class="product">
+        <a href="productB.html">
+            <img src="https://via.placeholder.com/250" alt="Sản phẩm B">
+        </a>
+        <a href="productB.html">
+            <h3>Sản phẩm B</h3>
+        </a>
+        <p class="price">750.000 VNĐ</p>
+        <a href="productB.html">
+            <button>Thêm vào giỏ hàng</button>
+        </a>
+        <a href="productB.html">
+            <button>Mua ngay</button>
+        </a>
+    </div>
+
+    <!-- Sản phẩm C -->
+    <div class="product">
+        <a href="productC.html">
+            <img src="https://via.placeholder.com/250" alt="Sản phẩm C">
+        </a>
+        <a href="productC.html">
+            <h3>Sản phẩm C</h3>
+        </a>
+        <p class="price">1.200.000 VNĐ</p>
+        <a href="productC.html">
+            <button>Thêm vào giỏ hàng</button>
+        </a>
+        <a href="productC.html">
+            <button>Mua ngay</button>
+        </a>
+    </div>
+
+    <!-- Sản phẩm D -->
+    <div class="product">
+        <a href="productD.html">
+            <img src="https://via.placeholder.com/250" alt="Sản phẩm D">
+        </a>
+        <a href="productD.html">
+            <h3>Sản phẩm D</h3>
+        </a>
+        <p class="price">1.500.000 VNĐ</p>
+        <a href="productD.html">
+            <button>Thêm vào giỏ hàng</button>
+        </a>
+        <a href="productD.html">
+            <button>Mua ngay</button>
+        </a>
+    </div>
+</div>
+
+<footer>
+    <p>© 2024 Trang Bán Hàng của Tôi. Tất cả quyền được bảo vệ.</p>
+</footer>
+
 </body>
 </html>
-<head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E1MB1N5ZMS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-E1MB1N5ZMS');
-</script>
-</head>
-
-Nguyễn Thị Kim Anh
-<p>
-    <b style="color:red">
-    Lớp 16
-
-</b>
-</p>
-
-<div style="color:white; 
-background-color: blue;
- width: 50%;
-height: 40px " >
-    Trường đại học Kinh tế Quốc dân
-</div> 
-
-<table border="1px">
-    <tr>
-        <th>STT</th>
-        <th>Ngành</th>
-        <th>Khóa</th>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>Toán Kinh tế</td>
-        <td>K63</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>Tài chính Ngân hàng</td>
-        <td>K63</td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>Thương mại điện tử</td>
-        <td>K63</td>
-    </tr>
-</table>
-
-   
-
-
-<br>
-<script>
-    var tuoi = 18 
-    tuoi = parseInt ( window.prompt(" Nhập tuổi:"))
-        for( var i = 0; i < 10; i++){
-    document.write("Năm nay em ", tuoi + i, " tuổi.<br>")
-    }
-</script>
-
-   <script>
-    var tuoi = function(nam_sinh) {
-       var nam_sinh = parseInt(window.prompt(" Nhập năm sinh:")) 
-    tuoi = 2024 - nam_sinh
-    return tuoi
-    }
-  
-  document. write(tuoi, "br") 
-   var a = ["Lan" , "Thao" , "Nga" , "Linh"]
-   var s = "T 12 3"
-   document.write(s.length)
- document.writewrite(a)
-   </script>
-   
-   Nhập tên: <input id="input" value>
-   <br>
-   <button onclick="xin_chao()">OK</button>
-   <div id="loi_chao"></div>
-   <script>
-    var xin_chao = function() {
-   var ten = document.getElementById("input").value
-   var loi_chao = "Xin chào " + ten
-   document.getElementById("loi_chao").innerHTML = loi_chao
-    }
-    var thong_bao = function(){
-        document.getElementById("loi_chao")
-        .innerHTML+= "Hết giờ <br>"
-    }
-    setTimeout(thong_bao , 3000)
-    document.getElementById("loi_chao")
-    .innerHTML= "Xin chào <br>"
-
-
-   </script>
