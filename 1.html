@@ -1,0 +1,105 @@
+<head></head>
+
+Nguyễn Thị Kim Anh
+<p>
+    <b style="color:red">
+    Lớp 16
+
+</b>
+</p>
+
+<div style="color:white; 
+background-color: blue;
+ width: 50%;
+height: 40px " >
+    Trường đại học Kinh tế Quốc dân
+</div> 
+
+<table border="1px">
+    <tr>
+        <th>STT</th>
+        <th>Ngành</th>
+        <th>Khóa</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Toán Kinh tế</td>
+        <td>K63</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Tài chính Ngân hàng</td>
+        <td>K63</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Thương mại điện tử</td>
+        <td>K63</td>
+    </tr>
+</table>
+
+   
+
+
+<br>
+<script>
+    var tuoi = 18 
+    tuoi = parseInt ( window.prompt(" Nhập tuổi:"))
+    if( tuoi >= 16){
+        document.write("oke")
+
+    }
+    else{
+        document.write("ko được")
+    }
+
+    for( var i = 0; i < 10; i++){
+    document.write("Năm nay em ", tuoi + i, " tuổi.<br>")
+    }
+</script>
+
+   <script>
+    var tuoi = 0
+    var co_hang_xom = {
+        ten: "Lan",
+        tuoi: 18,
+        hon_nhan: false,
+        dia_chi:{
+            quan: "Cầu Giấy",
+            phuong: " Mai Dịch"
+        }
+    }
+    var tinh_tuoi = function(nam_sinh) {
+       //var nam_sinh = parseInt(window.prompt(" Nhập năm sinh:")) 
+    tuoi = 2024 - nam_sinh
+    return tuoi
+    }
+  
+  document. write(tinh_tuoi(2000), "<br>") 
+   document. write(tinh_tuoi(2003), "<br>") 
+   var a = ["Lan" , "Thao" , "Nga" , "Linh"]
+   var s = "T 12 3"
+   document.write(s.length)
+
+   </script>
+   
+   Nhập tên: <input id="input" value>
+   <br>
+   <button onclick="xin_chao()">OK</button>
+   <div id="loi_chao"></div>
+   <script>
+    var xin_chao = function() {
+   var ten = document.getElementById("input").value
+   var loi_chao = "Xin chào " + ten
+   document.getElementById("loi_chao").innerHTML = loi_chao
+    }
+    var thong_bao = function(){
+        document.getElementById("loi_chao")
+        .innerHTML+= "Hết giờ <br>"
+    }
+    setTimeout(thong_bao , 3000)
+    document.getElementById("loi_chao")
+    .innerHTML= "Xin chào <br>"
+
+
+   </script>
