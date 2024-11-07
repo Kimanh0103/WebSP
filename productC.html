@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết Sản phẩm C</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        .product-detail {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .product-detail img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 5px;
+        }
+        .product-detail h3 {
+            margin-top: 10px;
+        }
+        .product-detail p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        .product-detail .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #f39c12;
+        }
+        .product-detail .size-options {
+            margin: 15px 0;
+        }
+        .product-detail .size-options select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .product-detail button {
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .product-detail button:hover {
+            background-color: #e67e22;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Chi tiết Sản phẩm C</h1>
+</header>
+
+<div class="product-detail">
+    <img src="https://via.placeholder.com/400" alt="Sản phẩm C">
+    <h3>Sản phẩm C</h3>
+    <p class="price" id="productPrice">300.000 VNĐ</p>
+    <p>Sản phẩm dành cho trẻ trên 3 tuổi. Đây là sản phẩm giúp trẻ phát triển trí não và thể chất một cách toàn diện, an toàn và chất lượng.</p>
+
+    <!-- Mục chọn kích cỡ -->
+    <div class="size-options">
+        <label for="sizeSelect">Chọn kích cỡ:</label>
+        <select id="sizeSelect">
+            <option value="200g">200g - 300.000 VNĐ</option>
+            <option value="500g">500g - 500.000 VNĐ</option>
+            <option value="1kg">1kg - 850.000 VNĐ</option>
+            <option value="1.5kg">1.5kg - 1.600.000 VNĐ</option>
+        </select>
+    </div>
+
+    <!-- Các thao tác mua hàng -->
+    <button>Thêm vào giỏ hàng</button>
+    <button>Mua ngay</button>
+</div>
+
+<footer>
+    <p>© 2024 Trang Bán Hàng của Tôi. Tất cả quyền được bảo vệ.</p>
+</footer>
+
+<script>
+    // Lắng nghe sự kiện thay đổi lựa chọn kích cỡ
+    document.getElementById('sizeSelect').addEventListener('change', function() {
+        var size = this.value;
+        var price = 0;
+
+        // Kiểm tra giá tương ứng với kích cỡ
+        switch(size) {
+            case '200g':
+                price = 300000;
+                break;
+            case '500g':
+                price = 500000;
+                break;
+            case '1kg':
+                price = 850000;
+                break;
+            case '1.5kg':
+                price = 1600000;
+                break;
+        }
+
+        // Cập nhật giá hiển thị
+        document.getElementById('productPrice').textContent = price.toLocaleString() + " VNĐ";
+    });
+</script>
+
+</body>
+</html>
