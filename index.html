@@ -83,24 +83,13 @@ height: 40px " >
 <br>
 
    <script>
-    var tuoi = 0
-    var co_hang_xom = {
-        ten: "Lan",
-        tuoi: 18,
-        hon_nhan: false,
-        dia_chi:{
-            quan: "Cầu Giấy",
-            phuong: " Mai Dịch"
-        }
-    }
     var tinh_tuoi = function(nam_sinh) {
        var nam_sinh = parseInt(window.prompt(" Nhập năm sinh:")) 
-    tuoi = 2024 - nam_sinh
+    tinh_tuoi = 2024 - nam_sinh
     return tuoi
     }
   
-  document. write(tinh_tuoi(2000), "<br>") 
-   document. write(tinh_tuoi(2003), "<br>") 
+  document. write(tinh_tuoi)
    var a = ["Lan" , "Thao" , "Nga" , "Linh"]
    var s = "T 12 3"
    document.write(s.length)
