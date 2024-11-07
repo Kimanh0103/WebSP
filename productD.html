@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết Sản phẩm D</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        .product-detail {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .product-detail img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 5px;
+        }
+        .product-detail h3 {
+            margin-top: 10px;
+        }
+        .product-detail p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        .product-detail .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #f39c12;
+        }
+        .product-detail .out-of-stock {
+            color: red;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .product-detail button {
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .product-detail button:hover {
+            background-color: #e67e22;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Chi tiết Sản phẩm D</h1>
+</header>
+
+<div class="product-detail">
+    <img src="https://via.placeholder.com/400" alt="Sản phẩm D">
+    <h3>Sản phẩm D</h3>
+    <p class="price">Hết hàng</p>
+    <p>Sản phẩm dành cho mẹ và bé. Đây là sản phẩm giúp mẹ và bé cùng tận hưởng những giây phút thư giãn và thoải mái.</p>
+
+    <!-- Thông báo hết hàng -->
+    <div class="out-of-stock">
+        <p>Sản phẩm này hiện đã hết hàng. Vui lòng quay lại sau.</p>
+    </div>
+
+    <!-- Không có thao tác mua hàng vì hết hàng -->
+    <button disabled>Thêm vào giỏ hàng</button>
+    <button disabled>Mua ngay</button>
+</div>
+
+<footer>
+    <p>© 2024 Trang Bán Hàng của Tôi. Tất cả quyền được bảo vệ.</p>
+</footer>
+
+</body>
+</html>
