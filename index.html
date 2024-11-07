@@ -81,9 +81,16 @@ height: 40px " >
 
 
 <br>
+<script>
+    var tuoi = 18 
+    tuoi = parseInt ( window.prompt(" Nhập tuổi:"))
+        for( var i = 0; i < 10; i++){
+    document.write("Năm nay em ", tuoi + i, " tuổi.<br>")
+    }
+</script>
 
    <script>
-    var tinh_tuoi = function(nam_sinh) {
+    var tuoi = function(nam_sinh) {
        var nam_sinh = parseInt(window.prompt(" Nhập năm sinh:")) 
     tuoi = 2024 - nam_sinh
     return tuoi
