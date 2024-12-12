@@ -2,3 +2,4 @@
 <img width="492" alt="2" src="https://github.com/user-attachments/assets/879749a6-eb94-4b30-83b4-cadbfea230e8">
 ![3](https://github.com/user-attachments/assets/b6294edf-1500-4843-aaf9-bf16357c0b83)
 ![4](https://github.com/user-attachments/assets/f388281d-4b94-48da-a4b8-5740336b691a)
+![trang chủ trên cùng](https://github.com/user-attachments/assets/0560f7a4-45aa-48c4-a816-8433986a466a)
