@@ -3,14 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Bán Hàng</title>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-NK8W2SDP');</script>
-    <!-- End Google Tag Manager -->
+    <title>Shop len của Kim Anh</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -26,18 +19,68 @@
         }
         nav {
             background-color: #444;
-            padding: 10px;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
         }
         nav a {
             color: white;
             margin: 0 15px;
             text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #f39c12; /* Màu khi hover */
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1; /* Màu khi hover */
+        }
+        .dropdown:hover .dropdown-content {
+            display: block; /* Hiện menu khi hover */
+        }
+        .banner {
+            width: 100%;
+            height: 300px; /* Chiều cao banner */
+            background-image: url('https://github.com/user-attachments/assets/2ec97dba-e110-4879-a08b-f2b6383b47fd'); /* Hình ảnh banner Giáng Sinh từ GitHub */
+            background-size: cover; /* Đảm bảo hình ảnh lấp đầy toàn bộ phần tử */
+            display: flex;
+            align-items: center; /* Căn giữa theo chiều dọc */
+            justify-content: center; /* Căn giữa theo chiều ngang */
+            color: white; /* Màu chữ */
+            font-size: 48px; /* Cỡ chữ cho banner */
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Thay đổi font chữ */
+        }
+        .merry-christmas {
+            color: rgb(4, 45, 4); /* Màu xanh lá cây cho dòng chữ Merry Christmas */
+            font-size: 52px; /* Cỡ chữ*/
+            font-weight: bold; /* In đậm chữ */
+            font-style: italic; /* in nghiêng*/
         }
         .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
             padding: 20px;
+        }
+        .featured-products {
+            display: flex;
+            justify-content: space-around; /* Căn giữa các sản phẩm nổi bật */
+            flex-wrap: wrap; /* Cho phép sản phẩm xuống hàng nếu không đủ chỗ */
         }
         .product {
             background-color: white;
@@ -46,130 +89,134 @@
             text-align: center;
             border-radius: 5px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 250px;
-            box-sizing: border-box;
+            width: calc(23% - 20px); /* Bốn sản phẩm trên một hàng */
         }
         .product img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .product h3 {
-            margin: 10px 0;
-            cursor: pointer;
-        }
-        .product .price {
-            font-size: 18px;
-            font-weight: bold;
-            color: #f39c12;
-        }
-        .product button {
-            background-color: #f39c12;
-            color: white;
-            border: none;
-            padding: 10px;
-            margin: 5px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        .product button:hover {
-            background-color: #e67e22;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
+           width :100%; 
+           height:auto ; 
+           border-radius :5 px ;  
+       }
+       .price {
+           font-size: 20px; /* Cỡ chữ lớn cho giá khuyến mãi */
+           color: #FFD700; /* Màu vàng nhạt cho giá khuyến mãi */
+       }
+       .original-price {
+           text-decoration: line-through;
+           color: gray; /* Màu xám cho giá gốc */
+           font-size: 14px; /* Cỡ chữ nhỏ hơn cho giá gốc */
+       }
+       .discount-percentage {
+           color:red; /* Màu đỏ cho phần trăm giảm giá */
+           font-size :16 px ; 
+           margin-left :5 px ; 
+       }
+       footer {
+           background-color:#333 ;  
+           color:white ;  
+           text-align:center ;  
+           padding :10 px ;  
+       }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Trang Bán Hàng</h1>
-    <p>Chào mừng bạn đến với cửa hàng của chúng tôi</p>
+    <h1>Shop len của Kim Anh</h1>
+    <p>Chào mừng bạn đến với cửa hàng sản phẩm handmade bằng len</p>
 </header>
 
 <nav>
-    <a href="#home">Trang Chủ</a>
-    <a href="#products">Sản Phẩm</a>
-    <a href="#cart">Giỏ Hàng</a>
-    <a href="#contact">Liên Hệ</a>
+    <a href="trangchu.html">Trang Chủ</a>
+    <a href="#">Giới Thiệu</a>
+    <div class="dropdown">
+        <a href="#">Sản Phẩm</a>
+        <div class="dropdown-content">
+            <a href="keptoc.html">Kẹp tóc</a>
+            <a href="tuixach.html">Túi xách</a>
+            <a href="mochoa.html">Móc khóa</a>
+            <a href="ao.html">Áo</a>
+            <a href="chanvay.html">Chân váy</a>
+            <a href="vay.html">Váy</a>
+            <a href="giay.html">Giày</a>
+        </div>
+    </div>
+    <a href="#">Liên Hệ</a>
 </nav>
 
-<div class="container" id="products">
-    <!-- Sản phẩm A -->
-    <div class="product">
-        <a href="productA.html">
-            <img src="https://via.placeholder.com/250" alt="Sản phẩm A">
-        </a>
-        <a href="productA.html">
-            <h3>Sản phẩm A</h3>
-        </a>
-        <p class="price">500.000 VNĐ</p>
-        <button onclick="addToCart('Sản phẩm A', 500000)">Thêm vào giỏ hàng</button>
-        <button onclick="buyNow('productA.html')">Mua ngay</button>
+<div class="banner">
+    <span class="merry-christmas">Merry Christmas!</span>
+</div>
+
+<div class="container">
+    <h2>Sản Phẩm Giáng Sinh</h2> <!-- Tiêu đề cho phần sản phẩm Giáng Sinh -->
+    
+    <div class="featured-products">
+       <!-- Sản phẩm C (Cây thông Noel handmade) -->
+       <div class="product">
+           <a href="tuiluoi.html"><img src="https://github.com/user-attachments/assets/d727b3e7-0f0a-4baf-b1ef-43ec587e35e9" alt="Cây thông Noel handmade"></a>
+           <h3>Cây thông Noel handmade</h3>
+           <p>Móc khóa bằng len hình cây thông noel trang trí nhà, bàn học, tặng làm quà</p>
+           <p class="price">40.000 VNĐ<span class="discount-percentage">(-27%)</span></p> <!-- Giá hiện tại -->
+           <p class="original-price">55.000 VNĐ</p> <!-- Giá gốc -->
+           <button>Thêm vào giỏ hàng</button>
+           <button>Mua ngay!</button>    
+       </div>
+
+       <!-- Sản phẩm D (Mũ giáng sinh bằng len handmade) -->
+       <div class="product">
+           <a href="laco.html"><img src="https://github.com/user-attachments/assets/f48de9ad-3501-4e5e-a3be-52325bc9c3a9" alt="Mũ giáng sinh bằng len handmade"></a>
+           <h3>Mũ giáng sinh bằng len handmade</h3>
+           <p>Mũ ông già Noel ấm áp, đội trong dịp giáng sinh được làm bằng len handmade an toàn cho da và mọi lứa tuổi</p>
+           <p class="price">65.000 VNĐ<span class="discount-percentage">(-28%)</span></p> <!-- Giá hiện tại -->
+           <p class="original-price">90.000 VNĐ</p> <!-- Giá gốc -->
+           <button>Thêm vào giỏ hàng</button>
+           <button>Mua ngay!</button>    
+       </div>
+
+       <!-- Sản phẩm E (Mũ giáng sinh hình cây thông) -->
+       <div class="product">
+           <img src="https://github.com/user-attachments/assets/5a0f0efa-706a-423e-bd7a-5afe71fb97e4" alt="Mũ giáng sinh hình cây thông">
+           <h3>Mũ giáng sinh hình cây thông</h3>
+           <p>Mũ hình cây thông noel đội trong dịp giáng sinh bằng len handmade ấm áp, an toàn cho da và mọi lứa tuổi</p>
+           <p class="price">65.000 VNĐ<span class="discount-percentage">(-28%)</span></p> <!-- Giá hiện tại -->
+           <p class="original-price">90.000 VNĐ</p> <!-- Giá gốc -->
+           <button>Thêm vào giỏ hàng</button>
+           <button>Mua ngay!</button>    
+       </div>
+
     </div>
 
-    <!-- Sản phẩm B -->
-    <div class="product">
-        <a href="productB.html">
-            <img src="https://via.placeholder.com/250" alt="Sản phẩm B">
-        </a>
-        <a href="productB.html">
-            <h3>Sản phẩm B</h3>
-        </a>
-        <p class="price">750.000 VNĐ</p>
-        <button onclick="addToCart('Sản phẩm B', 750000)">Thêm vào giỏ hàng</button>
-        <button onclick="buyNow('productB.html')">Mua ngay</button>
+    <!-- Sản Phẩm Nổi Bật -->
+    <h2>Sản Phẩm Nổi Bật</h2> 
+    <div class="featured-products">
+        <!-- Sản phẩm A (Kẹp tóc) -->
+        <div class="product">
+           <a href="keptoc.html"><img src="https://github.com/user-attachments/assets/f693140a-6cf9-46cd-bf57-be90b9b8ebb8" alt="Kẹp tóc tai thỏ đáng yêu"></a>
+           <h3>Kẹp tóc hình tai thỏ đáng yêu</h3>
+           <p>Sản phẩm handmade làm từ len an toàn, hình dáng tai thỏ đủ màu đáng yêu phù hợp đi học đi chơi.</p>
+           <p class="price">25.000 VNĐ<span class="discount-percentage">(-30%)</span></p> <!-- Giá hiện tại -->
+           <p class="original-price">35.000 VNĐ</p> <!-- Giá gốc -->
+           <button>Thêm vào giỏ hàng</button>
+           <button>Mua ngay!</button>
+       </div>
+
+       <!-- Sản phẩm B (Túi xách) -->
+       <div class="product">
+           <a href="product1.html"><img src="https://github.com/user-attachments/assets/e465f033-560a-4c27-9486-4705f2922d91" alt="Túi xách handmade bằng len"></a>
+           <h3>Túi xách handmade bằng len</h3>
+           <p>Túi len handmade, túi len lưới đi học, đi chơi dễ thương (túi lót canvas)</p>
+           <p class="price">250.000 VNĐ</p>
+           <button>Thêm vào giỏ hàng</button>
+           <button>Mua ngay!</button>    
+       </div>
+
     </div>
 
-    <!-- Sản phẩm C -->
-    <div class="product">
-        <a href="productC.html">
-            <img src="https://via.placeholder.com/250" alt="Sản phẩm C">
-        </a>
-        <a href="productC.html">
-            <h3>Sản phẩm C</h3>
-        </a>
-        <p class="price">1.200.000 VNĐ</p>
-        <button onclick="addToCart('Sản phẩm C', 1200000)">Thêm vào giỏ hàng</button>
-        <button onclick="buyNow('productC.html')">Mua ngay</button>
-    </div>
-
-    <!-- Sản phẩm D -->
-    <div class="product">
-        <a href="productD.html">
-            <img src="https://via.placeholder.com/250" alt="Sản phẩm D">
-        </a>
-        <a href="productD.html">
-            <h3>Sản phẩm D</h3>
-        </a>
-        <p class="price">1.500.000 VNĐ</p>
-        <button onclick="addToCart('Sản phẩm D', 1500000)">Thêm vào giỏ hàng</button>
-        <button onclick="buyNow('productD.html')">Mua ngay</button>
-    </div>
 </div>
 
 <footer>
-    <p>© 2024 Trang Bán Hàng của Tôi. Tất cả quyền được bảo vệ.</p>
+    <p>© 2024 Shop len của Kim Anh. Tất cả quyền được bảo vệ.</p>
 </footer>
-
-<script>
-// Giả lập chức năng thêm sản phẩm vào giỏ hàng
-function addToCart(productName, price) {
-    alert(productName + " đã được thêm vào giỏ hàng với giá " + price.toLocaleString() + " VNĐ.");
-}
-
-// Giả lập chức năng mua ngay
-function buyNow(productUrl) {
-    window.location.href = productUrl; // Chuyển hướng đến trang sản phẩm
-}
-</script>
 
 </body>
 </html>
