@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kẹp Tóc - Shop len của Kim Anh</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9; /* Màu nền */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333; 
+            color: white; 
+            padding: 15px 0; 
+            text-align: center; 
+        }
+        nav {
+            background-color: #444; 
+            display: flex; 
+            justify-content: center; 
+            padding: 10px 0; 
+        }
+        nav a {
+            color: white; 
+            margin-left: 15px; 
+            margin-right: 15px; 
+            text-decoration: none; 
+            font-weight: bold; 
+        }
+        nav a:hover {
+            color: #f39c12; /* Màu khi hover */
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1; /* Màu khi hover */
+        }
+        .dropdown:hover .dropdown-content {
+            display: block; /* Hiện menu khi hover */
+        }
+        .container {
+            padding: 20px; 
+        }
+        .featured-products {
+            display: flex;
+            justify-content: space-between; /* Căn giữa các sản phẩm nổi bật */
+            flex-wrap: wrap; /* Cho phép sản phẩm xuống hàng nếu không đủ chỗ */
+        }
+        .product {
+            background-color: transparent; /* Không có khung bao quanh */
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: calc(18% - 20px); /* Năm sản phẩm trên một hàng */
+        }
+        .product img {
+           width: 80%; /* Giảm kích thước hình ảnh */
+           height:auto ;
+           border-radius: 5px;
+           margin-bottom: 10px; /* Khoảng cách dưới hình ảnh */
+       }
+       footer {
+           background-color: #333; 
+           color: white; 
+           text-align: center; 
+           padding: 10px; 
+       }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Shop len của Kim Anh</h1>
+    <p>Chào mừng bạn đến với cửa hàng sản phẩm handmade bằng len</p>
+</header>
+
+<nav>
+    <a href="trangchu.html">Trang Chủ</a>
+    <a href="#">Giới thiệu</a>
+    <div class="dropdown">
+        <a href="#">Sản Phẩm</a>
+        <div class="dropdown-content">
+            <a href="keptoc.html">Kẹp tóc</a>
+            <a href="mochoa.html">Móc khóa</a>
+            <a href="tuixach.html">Túi xách</a>
+            <a href="ao.html">Áo</a>
+            <a href="chanvay.html">Chân váy</a>
+            <a href="vay.html">Váy</a>
+            <a href="giay.html">Giày</a>
+        </div>
+    </div>
+    <a href="#">Liên Hệ</a>
+</nav>
+
+<div class="container">
+    <h2>Danh Sách Sản Phẩm Kẹp Tóc</h2>
+
+    <div class="featured-products">
+        <!-- Danh sách sản phẩm Kẹp tóc -->
+            <!-- Sản phẩm A -->
+            <div class="product">
+                <a href="productA.html"><img src="https://via.placeholder.com/250" alt="Kẹp tóc handmade bằng len hình tai thỏ đáng yêu"></a>
+                <h3>Kẹp tóc handmade bằng len hình tai thỏ đáng yêu</h3>
+                <p class="price">35.000 VNĐ</p>
+                <button>Thêm vào giỏ hàng</button>
+                <button>Mua ngay</button>
+            </div>
+     
+            <!-- Sản phẩm B -->
+            <div class="product">
+                <a href="productB.html"><img src="https://via.placeholder.com/250" alt="Kẹp tóc hình ngôi sao xinh xắn đáng yêu"></a>
+                <h3>Kẹp tóc hình ngôi sao xinh xắn đáng yêu</h3>
+                <p class="price">25.000 VNĐ</p>
+                <button>Thêm vào giỏ hàng</button>
+                <button>Mua ngay</button>
+            </div>
+     
+            <!-- Sản phẩm C -->
+            <div class="product">
+                <a href="productC.html"><img src="https://via.placeholder.com/250" alt="Kẹp tóc hoa hồng nhỏ xinh đáng yêu"></a>
+                <h3>Kẹp tóc hoa hồng nhỏ xinh đáng yêu</h3>
+                <p class="price">20.000 VNĐ</p>
+                <button>Thêm vào giỏ hàng</button>
+                <button>Mua ngay</button>
+            </div>
+     
+            <!-- Sản phẩm D -->
+            <div class="product">
+                <a href="productD.html"><img src="https://via.placeholder.com/250" alt="Kẹp tóc bướm dễ thương"></a>
+                <h3>Kẹp tóc bướm dễ thương</h3>
+                <p class="price">40.000 VNĐ</p>
+                <button>Thêm vào giỏ hàng</button>
+                <button>Mua ngay</button>
+            </div>
+     
+            <!-- Sản phẩm E -->
+            <div class="product">
+                <a href="productE.html"><img src="https://via.placeholder.com/250" alt="Kẹp tóc hình trái tim ngọt ngào"></a>
+                <h3>Kẹp tóc hình trái tim ngọt ngào</h3>
+                <p class="price">30.000 VNĐ</p>
+                <button>Thêm vào giỏ hàng</button>
+                <button>Mua ngay</button>
+            </div>
+     
+            <!-- Sản phẩm F -->
+            <div class="product">
+                <a href="productF.html"><img src="https://via.placeholder.com/250" alt="Kẹp tóc chóp nón dễ thương"></a>
+                <h3>Kẹp tóc chóp nón dễ thương</h3>
+                <p class="price">22.000 VNĐ</p>
+                <button>Thêm vào giỏ hàng</button>
+                <button>Mua ngay</button>
+            </div>
+     
+            <!-- Sản phẩm G -->
+            <div class="product">
+                <a href="productG.html"><img src="https://via.placeholder.com/250" alt="Kẹp tóc kẻ sọc cá tính"></a>
+                <h3>Kẹp tóc kẻ sọc cá tính</h3>
+                <p class="price">28.000 VNĐ</p>
+                <button>Thêm vào giỏ hàng</button>
+                <button>Mua ngay</button>
+            </div>
+     
+            <!-- Sản phẩm H -->
+            <div class="product">
+               <a href = "productH.html"><img src = "https://via.placeholder.com/250" alt = "Kẹp tóc hoa cúc trắng tinh khôi"></a >
+               <h3 >Kẹp tóc hoa cúc trắng tinh khôi </h3 >
+               <p class = "price" >45.000 VNĐ </p >
+               <button >Thêm vào giỏ hàng </button >
+               <button >Mua ngay </button >
+           </div >
+     
+           <!-- Sản phẩm I -->
+           <div class="product">
+             <a href = "productH.html"><img src = "https://via.placeholder.com/250" alt = "Kẹp tóc hoa cúc trắng tinh khôi"></a >
+             <h3 >Kẹp tóc dưa hấu cho bé gái bằng len handmade </h3 >
+             <p class = "price" >20.000 VNĐ </p >
+             <button >Thêm vào giỏ hàng </button >
+             <button >Mua ngay </button >
+         </div >
+           <!-- Sản phẩm J -->
+           <div class="product">
+             <a href = "productH.html"><img src = "https://via.placeholder.com/250" alt = "Kẹp tóc hoa cúc trắng tinh khôi"></a >
+             <h3 >Kẹp tóc quả đào màu sắc đỏ, hông xinh xắn </h3 >
+             <p class = "price" >35.000 VNĐ </p >
+             <button >Thêm vào giỏ hàng </button >
+             <button >Mua ngay </button >
+         </div >
+           <!-- Sản phẩm K -->
+           <div class="product">
+             <a href = "productH.html"><img src = "https://via.placeholder.com/250" alt = "Kẹp tóc hoa cúc trắng tinh khôi"></a >
+             <h3 >Kẹp tóc hình trái kiwi bằng len </h3 >
+             <p class = "price" >30.000 VNĐ </p >
+             <button >Thêm vào giỏ hàng </button >
+             <button >Mua ngay </button >
+         </div >
+         <div class="product">
+             <a href = "productH.html"><img src = "https://via.placeholder.com/250" alt = "Kẹp tóc hoa cúc trắng tinh khôi"></a >
+             <h3 >Kẹp tóc hình lát cam tươi mát cho mùa he năng động đi biển </h3 >
+             <p class = "price" >35.000 VNĐ </p >
+             <button >Thêm vào giỏ hàng </button >
+             <button >Mua ngay </button >
+         </div >
+           <!-- Sản phẩm M -->
+           <div class="product">
+             <a href = "productH.html"><img src = "https://via.placeholder.com/250" alt = "Kẹp tóc hoa cúc trắng tinh khôi"></a >
+             <h3 >Kẹp tóc hình quả chuối vui nhộn </h3 >
+             <p class = "price" >30.000 VNĐ </p >
+             <button >Thêm vào giỏ hàng </button >
+             <button >Mua ngay </button >
+    </div>
+
+
+<body >
+
