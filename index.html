@@ -5,20 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang Bán Hàng</title>
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NK8W2SDP');</script>
-<!-- End Google Tag Manager -->
-</script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NK8W2SDP');</script>
+    <!-- End Google Tag Manager -->
     <style>
-        body 
-        <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NK8W2SDP"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-        {
+        body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
@@ -29,6 +23,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             color: white;
             padding: 15px 0;
             text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
         }
         .container {
             display: flex;
@@ -91,7 +94,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>Chào mừng bạn đến với cửa hàng của chúng tôi</p>
 </header>
 
-<div class="container">
+<nav>
+    <a href="#home">Trang Chủ</a>
+    <a href="#products">Sản Phẩm</a>
+    <a href="#cart">Giỏ Hàng</a>
+    <a href="#contact">Liên Hệ</a>
+</nav>
+
+<div class="container" id="products">
     <!-- Sản phẩm A -->
     <div class="product">
         <a href="productA.html">
@@ -101,12 +111,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <h3>Sản phẩm A</h3>
         </a>
         <p class="price">500.000 VNĐ</p>
-        <a href="productA.html">
-            <button>Thêm vào giỏ hàng</button>
-        </a>
-        <a href="productA.html">
-            <button>Mua ngay</button>
-        </a>
+        <button onclick="addToCart('Sản phẩm A', 500000)">Thêm vào giỏ hàng</button>
+        <button onclick="buyNow('productA.html')">Mua ngay</button>
     </div>
 
     <!-- Sản phẩm B -->
@@ -118,12 +124,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <h3>Sản phẩm B</h3>
         </a>
         <p class="price">750.000 VNĐ</p>
-        <a href="productB.html">
-            <button>Thêm vào giỏ hàng</button>
-        </a>
-        <a href="productB.html">
-            <button>Mua ngay</button>
-        </a>
+        <button onclick="addToCart('Sản phẩm B', 750000)">Thêm vào giỏ hàng</button>
+        <button onclick="buyNow('productB.html')">Mua ngay</button>
     </div>
 
     <!-- Sản phẩm C -->
@@ -135,12 +137,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <h3>Sản phẩm C</h3>
         </a>
         <p class="price">1.200.000 VNĐ</p>
-        <a href="productC.html">
-            <button>Thêm vào giỏ hàng</button>
-        </a>
-        <a href="productC.html">
-            <button>Mua ngay</button>
-        </a>
+        <button onclick="addToCart('Sản phẩm C', 1200000)">Thêm vào giỏ hàng</button>
+        <button onclick="buyNow('productC.html')">Mua ngay</button>
     </div>
 
     <!-- Sản phẩm D -->
@@ -152,18 +150,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <h3>Sản phẩm D</h3>
         </a>
         <p class="price">1.500.000 VNĐ</p>
-        <a href="productD.html">
-            <button>Thêm vào giỏ hàng</button>
-        </a>
-        <a href="productD.html">
-            <button>Mua ngay</button>
-        </a>
+        <button onclick="addToCart('Sản phẩm D', 1500000)">Thêm vào giỏ hàng</button>
+        <button onclick="buyNow('productD.html')">Mua ngay</button>
     </div>
 </div>
 
 <footer>
     <p>© 2024 Trang Bán Hàng của Tôi. Tất cả quyền được bảo vệ.</p>
 </footer>
+
+<script>
+// Giả lập chức năng thêm sản phẩm vào giỏ hàng
+function addToCart(productName, price) {
+    alert(productName + " đã được thêm vào giỏ hàng với giá " + price.toLocaleString() + " VNĐ.");
+}
+
+// Giả lập chức năng mua ngay
+function buyNow(productUrl) {
+    window.location.href = productUrl; // Chuyển hướng đến trang sản phẩm
+}
+</script>
 
 </body>
 </html>
